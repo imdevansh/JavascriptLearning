@@ -40,8 +40,31 @@ const myFunction = function(){
     console.log("Hello World");
 }
 
-console.log(typeof myFunction); //function
-console.log(typeof obj);// object
-console.log(typeof heroes);// object
-console.log(typeof temp);
+// console.log(typeof myFunction); //function
+// console.log(typeof obj);// object
+// console.log(typeof heroes);// object
+// console.log(typeof temp);
+
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+//Stack(Primitive) , Heap(Non-Primitive type)
+
+let myName = "Devansh"
+
+let anotherName = myName;
+ console.log(anotherName);
+anotherName = "Devanshgupta";
+console.log(anotherName);
+
+let userOne = {
+    email: "user@google.com",
+    upi: "user@ybl"
+}
+
+let userTwo = userOne;
+console.log(userTwo.email);
+userTwo.email = "devanshgupta@gmail.com";
+console.log(userOne.email);
+
+ 
 

@@ -18,7 +18,8 @@
     }
     addLanguage('Python')
     addLanguage('C++')
-
+//in first function we when new language is added whole dom is traversed. it is not effective when we are haveing lots of elements.
+//so in this second approch we are using creatTextnode which is much more optimized.
     function AddOptiLanguage(langName){
         const li = document.createElement('li');
         li.appendChild(document.createTextNode(langName))

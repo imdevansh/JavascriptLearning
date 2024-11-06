@@ -9,8 +9,7 @@
     <h2>Amazing images</h2>
     <div>
         <ul id="images">
-            <li><img width="200px" id="dog" src="https://images.pexels.com/photos/18940719/pexels-photo-18940719/free-photo-of-golden-
-                retriever-lying-in-the-autumn-park.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="photoshop"></li>
+            <li><img width="200px" id="dog" src="https://images.pexels.com/photos/18940719/pexels-photo-18940719/free-photo-of-golden-retriever-lying-in-the-autumn-park.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="photoshop"></li>
             <li><img width="200px" id="car" src="https://images.pexels.com/photos/305070/pexels-photo-305070.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></li>
             <li><img width="200px" id="sheep" src=https://images.pexels.com/photos/29034031/pexels-photo-29034031/free-photo-of-serene-sheep-grazing-in-lush-meadow.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="sheep"></li>
             <li><img width="200px" id="horse" src="https://images.pexels.com/photos/635499/pexels-photo-635499.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></li>
@@ -19,13 +18,13 @@
         </ul>
     </div>
 </body>
-<script src="eventsBasics.js">
+<script>
     // document.getElementById('horse').onclick = function(){
     // alert("Horse clicked");
 //};
-
-document.getElementById('horse').addEventListener('click',function() {
-    alert('hi')
-})
+    // Example of inline JavaScript to handle the click event
+    document.getElementById('horse').addEventListener('click', function() {
+        alert("Horse clicked");
+    }, false);
 </script>
 </html>

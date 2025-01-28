@@ -14,7 +14,7 @@
             <li><img width="200px" id="sheep" src=https://images.pexels.com/photos/29034031/pexels-photo-29034031/free-photo-of-serene-sheep-grazing-in-lush-meadow.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="sheep"></li>
             <li><img width="200px" id="horse" src="https://images.pexels.com/photos/635499/pexels-photo-635499.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></li>
             <li><img width="200px" id="wolf" src="https://images.pexels.com/photos/397857/pexels-photo-397857.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></li>
-            <li><a style="color:rgb(202, 48, 182);" href="https://www.google.com/">Google</a></li>
+            <li><a style="color:rgb(202, 48, 182);" href="https://www.google.com/" id="google">Google</a></li>
         </ul>
     </div>
 </body>
@@ -23,8 +23,36 @@
     // alert("Horse clicked");
 //};
     // Example of inline JavaScript to handle the click event
-    document.getElementById('horse').addEventListener('click', function() {
-        alert("Horse clicked");
-    }, false);
+    // document.getElementById('images').addEventListener('click', function(e) {
+    //     console.log('Clicked inside ul');
+    // }, false);
+    //eventws to read 1:type,timestamp,defaultPrevented, target, toElement, srcElement, currentTarget
+    //ClientX,ClientY,ScreenX, ScreenY
+    //AltKey,ctrlKey, shift key, keyCode
+    // document.getElementById('horse').addEventListener('click',function(e){
+    //     console.log("Horse clicked");
+    //     e.stopPropagation();// it will stop bubbling to upwords
+    // },false)
+    // for flase first horse will clicked then ul, it is called event bubbling.
+    // if we do true in both the first ul will come then horse will come it is called event capturing.
+
+    // document.getElementById('google').addEventListener('click',function(e){
+    //     e.preventDefault();
+    //     e.stopPropagation();
+    //     console.log("Goole clicked.");
+        
+    // },false)
+
+    //below code is to remove image which is clicked
+    document.querySelector('#images').addEventListener('click',function(e){
+        console.log(e.target.tagName);
+        if (e.target.tagName =='IMG') {
+            console.log(e.target.id)
+            let removeit = e.target.parentNode;
+            removeit.remove();
+        }
+
+       // removeit.parentNode.removeChild(removeit);
+    },false)
 </script>
 </html>

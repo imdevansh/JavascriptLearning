@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur code</h1>
+    <button id="stop">Stop</button>
+    <button id="start">Start</button>
+</body>
+<script>
+    let intervalId; // Declare globally so we can access and update it
+
+    const sayDate = function(str){
+        console.log(str, Date.now());
+    }
+    function getRandomRGB() {
+  let r = Math.floor(Math.random() * 256);
+  let g = Math.floor(Math.random() * 256);
+  let b = Math.floor(Math.random() * 256);
+  return `rgb(${r}, ${g}, ${b})`;
+}
+const setColor = function(){
+  document.body.style.backgroundColor = getRandomRGB();
+}
+
+    document.querySelector('#start').addEventListener('click', function(){
+        if (!intervalId) { // Prevent multiple intervals from stacking
+            intervalId = setInterval(setColor, 1000);
+        }
+    });
+
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearInterval(intervalId);
+        intervalId = null; // Reset to allow restart
+    });
+
+</script>
+</html>

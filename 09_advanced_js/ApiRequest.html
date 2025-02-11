@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api request</title>
+</head>
+<body style="background-color: rgb(43, 43, 43);">
+    <div>
+        <img id ="imge" src="" style="width:480px;height:480px;">
+    
+            <p id="para"></p>
+  
+        <button id="btn">Get Photo</button>
+    </div>
+</body>
+<script>
+    const image = document.getElementById('imge');
+ document.getElementById('btn').addEventListener('click',function(){
+    const requestUrl = 'https://api.github.com/users/prince-961'
+   const xhr = new XMLHttpRequest();
+   console.log(xhr.readyState);
+  xhr.open('GET',requestUrl);
+  console.log(xhr.readyState);
+    xhr.onreadystatechange = function(){ 
+   console.log(xhr.readyState);
+   if(xhr.readyState == 4){
+    const data = JSON.parse(this.responseText);
+    console.log("Followere are:"+data.followers);
+    image.src = data.avatar_url;
+    para.innerHtml = data.followers;
+   }
+    }
+   xhr.send();
+ },false)
+    
+</script>
+</html>

@@ -9,7 +9,7 @@
 ## Why use OOP
 - hepls in write manageable code {Speghetii problem}
 
-## oarts of OOP
+## Parts of OOP
 Object literal
 - Contructor function
 - Prototype

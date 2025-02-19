@@ -12,12 +12,12 @@
 ## oarts of OOP
 Object literal
 - Contructor function
--Prototype
--Classes
+- Prototype
+- Classes
 - Instances (new, this)
 
 ### 4 Pillars
--Abstraction
--Encapsulation
--Inheritence
--Polymorphism
+- Abstraction
+- Encapsulation
+- Inheritence
+- Polymorphism

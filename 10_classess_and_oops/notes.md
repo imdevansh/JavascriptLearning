@@ -16,8 +16,8 @@ Object literal
 -Classes
 - Instances (new, this)
 
-## 4 Pillars
-Abstraction
-Encapsulation
-Inheritence
-Polymorphism
+### 4 Pillars
+-Abstraction
+-Encapsulation
+-Inheritence
+-Polymorphism
